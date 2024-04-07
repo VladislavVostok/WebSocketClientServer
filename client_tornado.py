@@ -7,7 +7,7 @@ class WebSocketClient(tornado.websocket.WebSocketClientConnection):
         
 
 async def connect_to_server():
-    url = "ws://localshost:5666/ws"
+    url = "ws://213.226.126.185:5666/ws"
     client = await tornado.websocket.websocket_connect(url)
     await client.send_message("Сервак ты чтоли")
     response = await client.read_message()

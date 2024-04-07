@@ -20,7 +20,7 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
 
 app = tornado.web.Application([
             (HostMatches("213.226.126.185"), [
-                (r"/", WebSocketHandler),
+                (r"/ws", WebSocketHandler),
             ]),
         ])
 
